@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/action_bar_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="@drawable/ic_left"
+        app:title="@string/orders"
+        app:titleCentered="true" />
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/action_bar_container">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/container_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_std"
+                android:layout_marginTop="@dimen/margin_std"
+                android:background="@drawable/bg_products_list_item"
+                android:orientation="vertical"
+                android:padding="@dimen/margin_std"
+                tools:ignore="UselessParent">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tv_oder_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sf_pro_semi_bold"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    tools:text="Order N-141" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tv_order_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_nrl"
+                    android:textSize="15sp"
+                    tools:text="Type : Delivery" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tv_order_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_nrl"
+                    android:textColor="@color/sub_title"
+                    tools:text="Time : 13.10.2021 09:00" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/container_products"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_std"
+                android:layout_marginTop="@dimen/margin_std"
+                android:background="@drawable/bg_products_list_item"
+                android:orientation="vertical"
+                android:padding="@dimen/margin_std"
+                tools:ignore="UselessParent">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sf_pro_semi_bold"
+                    android:text="@string/products"
+                    android:textColor="@color/black"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+
+
+                <LinearLayout
+                    android:id="@+id/products_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_large"
+                    android:orientation="vertical" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="@dimen/margin_nrl"
+                    android:background="@color/light_grey" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_nrl">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginTop="@dimen/margin_std"
+                        android:fontFamily="@font/sf_pro_semi_bold"
+                        android:text="@string/order_value"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tv_order_all_sum"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/margin_small"
+                        android:layout_marginTop="@dimen/margin_std"
+                        android:fontFamily="@font/sf_pro_semi_bold"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        tools:ignore="RelativeOverlap"
+                        tools:text="304 000 sum" />
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/container_order_status"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_std"
+                android:layout_marginTop="@dimen/margin_std"
+                android:background="@drawable/bg_products_list_item"
+                android:orientation="vertical"
+                android:padding="@dimen/margin_std">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sf_pro_semi_bold"
+                    android:text="@string/order_status"
+                    android:textSize="18sp" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_nrl"
+                    android:textColor="@color/primary"
+                    android:fontFamily="@font/sf_pro_semi_bold"
+                    tools:text="Ordered"
+                    android:textSize="15sp" />
+
+                <com.shuhart.stepview.StepView
+                    android:id="@+id/order_step_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_std"
+                    android:paddingVertical="@dimen/margin_std"
+                    app:sv_doneCircleColor="@color/primary"
+                    app:sv_doneCircleRadius="@dimen/margin_std"
+                    app:sv_doneStepLineColor="@color/primary"
+                    app:sv_doneStepMarkColor="@color/white"
+                    app:sv_doneTextColor="@color/primary"
+                    app:sv_nextStepCircleColor="@color/light_grey"
+                    app:sv_nextStepCircleEnabled="true"
+                    app:sv_nextStepLineColor="@color/light_grey"
+                    app:sv_nextTextColor="@color/primary"
+                    app:sv_selectedCircleColor="@color/light_grey"
+                    app:sv_selectedTextColor="@color/primary"
+                    app:sv_stepLineWidth="@dimen/margin_extra_small"
+                    app:sv_stepPadding="@dimen/margin_extra_large"
+                    app:sv_stepsNumber="4" />
+
+            </LinearLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/container_location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_std"
+                android:layout_marginTop="@dimen/margin_std"
+                android:background="@drawable/bg_products_list_item"
+                android:padding="@dimen/margin_std">
+
+                <ImageView
+                    android:id="@+id/image_location"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/bg_profile"
+                    android:padding="@dimen/margin_nrl"
+                    android:src="@drawable/ic_location"
+                    app:tint="@color/primary"
+                    tools:ignore="ContentDescription" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tv_location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/margin_std"
+                    android:layout_toEndOf="@id/image_location"
+                    android:textColor="@color/black"
+                    android:textSize="17sp"
+                    tools:ignore="RelativeOverlap"
+                    tools:text="Mega planet,Macro " />
+
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentEnd="true"
+                    android:padding="@dimen/margin_nrl"
+                    android:src="@drawable/ic_right"
+                    app:tint="@color/primary"
+                    tools:ignore="ContentDescription" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_order_status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_std"
+        tools:text="Confirm"
+        android:textColor="@color/white"
+        android:fontFamily="@font/sf_pro_semi_bold"
+        android:background="@drawable/bg_app_btn"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

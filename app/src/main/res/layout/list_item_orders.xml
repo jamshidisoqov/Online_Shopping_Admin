@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/margin_small"
+    android:background="@drawable/bg_products_list_item"
+    android:orientation="vertical"
+    android:padding="@dimen/margin_std">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_order_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/sf_pro_semi_bold"
+        android:textSize="18sp"
+        tools:text="Order N-212" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_client_name"
+        android:layout_width="match_parent"
+        android:paddingVertical="@dimen/margin_small"
+        android:background="?selectableItemBackground"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        tools:text="Jamshid Isoqov"
+        android:textColor="@color/light_primary"
+        />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_order_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="13sp"
+        tools:text="13.01.2022 09:00"
+        android:layout_marginTop="@dimen/margin_small"
+        />
+
+</LinearLayout>

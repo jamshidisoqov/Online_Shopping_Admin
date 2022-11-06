@@ -1,9 +1,8 @@
 package uz.gita.online_shopping_admin.utils.extensions
 
-import android.util.Log
 import retrofit2.Response
 import uz.gita.online_shopping_admin.data.models.base.BaseResponse
-import uz.gita.online_shopping.data.models.other.ResultData
+import uz.gita.online_shopping_admin.data.models.base.ResultData
 import uz.gita.online_shopping_admin.utils.exceptions.AuthorizationException
 
 // Created by Jamshid Isoqov an 10/11/2022

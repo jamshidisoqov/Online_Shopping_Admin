@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashScreen">
+
+    <fragment
+        android:id="@+id/splashScreen"
+        tools:layout="@layout/screen_splash"
+        android:name="uz.gita.online_shopping_admin.ui.splash.SplashScreen"
+        android:label="SplashScreen" >
+        <action
+            android:id="@+id/action_splashScreen_to_loginScreen"
+            app:destination="@id/loginScreen"
+            app:popUpTo="@id/nav_graph" />
+        <action
+            android:id="@+id/action_splashScreen_to_mainScreen"
+            app:destination="@id/mainScreen"
+            app:popUpTo="@id/nav_graph" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginScreen"
+        tools:layout="@layout/screen_login"
+        android:name="uz.gita.online_shopping_admin.ui.login.LoginScreen"
+        android:label="LoginScreen" >
+        <action
+            android:id="@+id/action_loginScreen_to_mainScreen"
+            app:destination="@id/mainScreen"
+            app:popUpTo="@id/nav_graph" />
+    </fragment>
+    <action
+        android:id="@+id/action_global_loginScreen"
+        app:destination="@id/loginScreen"
+        app:popUpTo="@id/nav_graph" />
+    <fragment
+        android:id="@+id/mainScreen"
+        tools:layout="@layout/screen_main"
+        android:name="uz.gita.online_shopping_admin.ui.main.MainScreen"
+        android:label="MainScreen" >
+        <action
+            android:id="@+id/action_mainScreen_to_ordersScreen"
+            app:destination="@id/ordersScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/ordersScreen"
+        tools:layout="@layout/screen_orders"
+        android:name="uz.gita.online_shopping_admin.ui.main.orders.OrdersScreen"
+        android:label="OrdersScreen" >
+        <action
+            android:id="@+id/action_ordersScreen_to_orderDetailScreen"
+            app:destination="@id/orderDetailScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/orderDetailScreen"
+        tools:layout="@layout/screen_order_details"
+        android:name="uz.gita.online_shopping_admin.ui.main.orders.details.OrderDetailScreen"
+        android:label="OrderDetailScreen" />
+</navigation>

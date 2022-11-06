@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">Online Shopping Admin</string>
+    <string name="login">Login</string>
+    <string name="password">Password</string>
+    <string name="orders">Orders</string>
+    <string name="finance">Finance</string>
+    <string name="clients">Clients</string>
+    <string name="products">Products</string>
+    <string name="branches">Branches</string>
+    <string name="drivers">Drivers</string>
+    <string name="search_for_orders">Search for orders</string>
+    <string name="order_value">Order value</string>
+    <string name="order_status">Order status</string>
 </resources>

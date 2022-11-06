@@ -1,4 +1,4 @@
-package uz.gita.online_shopping.data.models.other
+package uz.gita.online_shopping_admin.data.models.base
 
 sealed class ResultData<T> {
     data class Success<T>(val data: T) : ResultData<T>()
@@ -10,9 +10,6 @@ sealed class ResultData<T> {
         return this
     }
 
-    inline fun onSuccesss(block: Success<T>.() -> Unit)= also {
-        if (this is Success) block(this)
-    }
 
     inline fun onError(block: (Throwable) -> Unit): ResultData<T> {
         if (this is Error) block(this.error)

@@ -11,6 +11,8 @@ import androidx.fragment.app.Fragment
 // Created by Jamshid Isoqov an 10/12/2022
 
 
+const val DEBOUNCE_TIME_OUT: Long = 100L
+
 fun Fragment.toast(message: String) {
     Toast.makeText(requireContext(), message, Toast.LENGTH_SHORT).show()
 }

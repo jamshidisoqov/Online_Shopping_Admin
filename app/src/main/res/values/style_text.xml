@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="TextInputLayoutStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+        <item name="boxCornerRadiusTopStart">@dimen/margin_std</item>
+        <item name="boxCornerRadiusTopEnd">@dimen/margin_std</item>
+        <item name="boxCornerRadiusBottomStart">@dimen/margin_std</item>
+        <item name="boxCornerRadiusBottomEnd">@dimen/margin_std</item>
+
+    </style>
+
+</resources>

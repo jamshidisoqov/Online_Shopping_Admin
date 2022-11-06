@@ -3,7 +3,29 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Jamshid/AndroidStudioProjects/OnlineShoppingAdmin/app/src/main/res/drawable/bg_app_btn.xml" value="0.136" />
         <entry key="..\:/Users/Jamshid/AndroidStudioProjects/OnlineShoppingAdmin/app/src/main/res/drawable/bg_language.xml" value="0.136" />
+        <entry key="..\:/Users/Jamshid/AndroidStudioProjects/OnlineShoppingAdmin/app/src/main/res/drawable/bg_products_list_item.xml" value="0.136" />
+        <entry key="..\:/Users/Jamshid/AndroidStudioProjects/OnlineShoppingAdmin/app/src/main/res/drawable/bg_profile.xml" value="0.136" />
+        <entry key="..\:/Users/Jamshid/AndroidStudioProjects/OnlineShoppingAdmin/app/src/main/res/drawable/bg_search_view.xml" value="0.136" />
+        <entry key="..\:/Users/Jamshid/AndroidStudioProjects/OnlineShoppingAdmin/app/src/main/res/drawable/ic_branches.xml" value="0.136" />
+        <entry key="..\:/Users/Jamshid/AndroidStudioProjects/OnlineShoppingAdmin/app/src/main/res/drawable/ic_buy.xml" value="0.136" />
+        <entry key="..\:/Users/Jamshid/AndroidStudioProjects/OnlineShoppingAdmin/app/src/main/res/drawable/ic_filte.xml" value="0.136" />
+        <entry key="..\:/Users/Jamshid/AndroidStudioProjects/OnlineShoppingAdmin/app/src/main/res/drawable/ic_finance.xml" value="0.136" />
+        <entry key="..\:/Users/Jamshid/AndroidStudioProjects/OnlineShoppingAdmin/app/src/main/res/drawable/ic_left.xml" value="0.1335" />
+        <entry key="..\:/Users/Jamshid/AndroidStudioProjects/OnlineShoppingAdmin/app/src/main/res/drawable/ic_location.xml" value="0.136" />
+        <entry key="..\:/Users/Jamshid/AndroidStudioProjects/OnlineShoppingAdmin/app/src/main/res/drawable/ic_products.xml" value="0.136" />
+        <entry key="..\:/Users/Jamshid/AndroidStudioProjects/OnlineShoppingAdmin/app/src/main/res/drawable/ic_search.xml" value="0.136" />
+        <entry key="..\:/Users/Jamshid/AndroidStudioProjects/OnlineShoppingAdmin/app/src/main/res/drawable/ic_send.xml" value="0.136" />
+        <entry key="..\:/Users/Jamshid/AndroidStudioProjects/OnlineShoppingAdmin/app/src/main/res/drawable/ic_users.xml" value="0.136" />
+        <entry key="..\:/Users/Jamshid/AndroidStudioProjects/OnlineShoppingAdmin/app/src/main/res/layout-land/screen_splash.xml" value="0.25052083333333336" />
+        <entry key="..\:/Users/Jamshid/AndroidStudioProjects/OnlineShoppingAdmin/app/src/main/res/layout/activity_main.xml" value="0.2484375" />
+        <entry key="..\:/Users/Jamshid/AndroidStudioProjects/OnlineShoppingAdmin/app/src/main/res/layout/list_item_orders.xml" value="0.24739583333333334" />
+        <entry key="..\:/Users/Jamshid/AndroidStudioProjects/OnlineShoppingAdmin/app/src/main/res/layout/screen_login.xml" value="0.2484375" />
+        <entry key="..\:/Users/Jamshid/AndroidStudioProjects/OnlineShoppingAdmin/app/src/main/res/layout/screen_main.xml" value="0.1" />
+        <entry key="..\:/Users/Jamshid/AndroidStudioProjects/OnlineShoppingAdmin/app/src/main/res/layout/screen_order_details.xml" value="0.2" />
+        <entry key="..\:/Users/Jamshid/AndroidStudioProjects/OnlineShoppingAdmin/app/src/main/res/layout/screen_orders.xml" value="0.2" />
+        <entry key="..\:/Users/Jamshid/AndroidStudioProjects/OnlineShoppingAdmin/app/src/main/res/layout/screen_splash.xml" value="0.11770833333333333" />
       </map>
     </option>
   </component>
@@ -12,5 +34,12 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.1" />
+      </ProjectState>
+    </option>
   </component>
 </project>

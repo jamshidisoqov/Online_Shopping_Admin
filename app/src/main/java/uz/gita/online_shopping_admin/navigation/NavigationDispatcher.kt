@@ -1,4 +1,4 @@
-package uz.gita.online_shopping_admin.directions
+package uz.gita.online_shopping_admin.navigation
 
 import kotlinx.coroutines.flow.MutableSharedFlow
 import javax.inject.Inject
