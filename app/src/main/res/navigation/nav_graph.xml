@@ -41,6 +41,15 @@
         <action
             android:id="@+id/action_mainScreen_to_ordersScreen"
             app:destination="@id/ordersScreen" />
+        <action
+            android:id="@+id/action_mainScreen_to_clientsScreen"
+            app:destination="@id/clientsScreen" />
+        <action
+            android:id="@+id/action_mainScreen_to_driversScreen"
+            app:destination="@id/driversScreen" />
+        <action
+            android:id="@+id/action_mainScreen_to_productsScreen"
+            app:destination="@id/productsScreen" />
     </fragment>
     <fragment
         android:id="@+id/ordersScreen"
@@ -50,10 +59,78 @@
         <action
             android:id="@+id/action_ordersScreen_to_orderDetailScreen"
             app:destination="@id/orderDetailScreen" />
+        <action
+            android:id="@+id/action_ordersScreen_to_filterScreen"
+            app:destination="@id/filterScreen" />
     </fragment>
     <fragment
         android:id="@+id/orderDetailScreen"
         tools:layout="@layout/screen_order_details"
         android:name="uz.gita.online_shopping_admin.ui.main.orders.details.OrderDetailScreen"
-        android:label="OrderDetailScreen" />
+        android:label="OrderDetailScreen" >
+        <argument
+            android:name="order_data"
+            app:argType="uz.gita.online_shopping_admin.data.models.data.OrderData" />
+    </fragment>
+    <fragment
+        android:id="@+id/filterScreen"
+        tools:layout="@layout/screen_filter"
+        android:name="uz.gita.online_shopping_admin.ui.main.orders.filter.FilterScreen"
+        android:label="FilterScreen" />
+    <fragment
+        android:id="@+id/clientsScreen"
+        tools:layout="@layout/screen_clients"
+        android:name="uz.gita.online_shopping_admin.ui.main.clients.ClientsScreen"
+        android:label="ClientsScreen" >
+        <action
+            android:id="@+id/action_clientsScreen_to_clientDetailsScreen"
+            app:destination="@id/clientDetailsScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/clientDetailsScreen"
+        tools:layout="@layout/screen_client_details"
+        android:name="uz.gita.online_shopping_admin.ui.main.clients.details.ClientDetailsScreen"
+        android:label="ClientDetailsScreen" >
+        <action
+            android:id="@+id/action_clientDetailsScreen_to_orderDetailScreen"
+            app:destination="@id/orderDetailScreen" />
+        <argument
+            android:name="client_data"
+            app:argType="uz.gita.online_shopping_admin.data.models.data.ClientData" />
+    </fragment>
+    <fragment
+        android:id="@+id/driversScreen"
+        tools:layout="@layout/screen_drivers"
+        android:name="uz.gita.online_shopping_admin.ui.main.drivers.DriversScreen"
+        android:label="DriversScreen" />
+    <fragment
+        android:id="@+id/productsScreen"
+        tools:layout="@layout/screen_products"
+        android:name="uz.gita.online_shopping_admin.ui.main.products.ProductsScreen"
+        android:label="ProductsScreen" >
+        <action
+            android:id="@+id/action_productsScreen_to_productDetailsScreen"
+            app:destination="@id/productDetailsScreen" />
+        <action
+            android:id="@+id/action_productsScreen_to_searchScreen"
+            app:destination="@id/searchScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/productDetailsScreen"
+        tools:layout="@layout/screen_product_detail"
+        android:name="uz.gita.online_shopping_admin.ui.main.products.details.ProductDetailsScreen"
+        android:label="ProductDetailsScreen" >
+        <argument
+            android:name="product_data"
+            app:argType="uz.gita.online_shopping_admin.data.models.data.ProductData" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchScreen"
+        tools:layout="@layout/screen_search_products"
+        android:name="uz.gita.online_shopping_admin.ui.main.products.search.SearchScreen"
+        android:label="SearchScreen" >
+        <action
+            android:id="@+id/action_searchScreen_to_orderDetailScreen"
+            app:destination="@id/orderDetailScreen" />
+    </fragment>
 </navigation>

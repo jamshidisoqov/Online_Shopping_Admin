@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/margin_small"
+    android:background="@drawable/bg_products_list_item"
+    android:orientation="vertical"
+    android:padding="@dimen/margin_std">
+
+    <ImageView
+        android:id="@+id/image_user"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/bg_profile"
+        android:padding="@dimen/margin_nrl"
+        android:src="@drawable/ic_profile"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+
+    <TextView
+        android:id="@+id/tv_client_name"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@id/image_user"
+        app:layout_constraintTop_toTopOf="@id/image_user"
+        app:layout_constraintBottom_toBottomOf="@id/image_user"
+        tools:text="Isoqov Jamshid"
+        android:layout_marginStart="@dimen/margin_std"
+        android:fontFamily="@font/sf_pro_semi_bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+    <ImageView
+        android:id="@+id/image_phone"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/bg_profile"
+        android:padding="@dimen/margin_nrl"
+        android:src="@drawable/ic_call"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="@dimen/margin_std"
+        app:layout_constraintTop_toBottomOf="@id/image_user"
+        tools:ignore="ContentDescription" />
+
+
+    <TextView
+        android:id="@+id/tv_client_phone"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@id/image_phone"
+        app:layout_constraintTop_toTopOf="@id/image_phone"
+        app:layout_constraintBottom_toBottomOf="@id/image_phone"
+        tools:text="+99 890 714 41 02"
+        android:background="?selectableItemBackground"
+        android:paddingVertical="@dimen/margin_nrl"
+        android:layout_marginStart="@dimen/margin_std"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

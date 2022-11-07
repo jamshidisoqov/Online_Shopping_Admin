@@ -4,14 +4,8 @@ import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn
 import dagger.hilt.android.scopes.ViewModelScoped
-import uz.gita.online_shopping_admin.directions.LoginScreenDirection
-import uz.gita.online_shopping_admin.directions.MainScreenDirection
-import uz.gita.online_shopping_admin.directions.OrderScreenDirection
-import uz.gita.online_shopping_admin.directions.SplashScreenDirection
-import uz.gita.online_shopping_admin.directions.impl.LoginScreenDirectionImpl
-import uz.gita.online_shopping_admin.directions.impl.MainScreenDirectionImpl
-import uz.gita.online_shopping_admin.directions.impl.OrderScreenDirectionImpl
-import uz.gita.online_shopping_admin.directions.impl.SplashScreenDirectionImpl
+import uz.gita.online_shopping_admin.directions.*
+import uz.gita.online_shopping_admin.directions.impl.*
 
 // Created by Jamshid Isoqov an 11/5/2022
 @Module
@@ -29,6 +23,21 @@ interface DirectionsModule {
 
     @Binds
     fun bindOrderScreenDirections(impl: OrderScreenDirectionImpl): OrderScreenDirection
+
+    @Binds
+    fun bindClientScreenDirection(impl: ClientScreenDirectionImpl): ClientScreenDirection
+
+    @Binds
+    fun bindClientDetailScreenDirection(impl: ClientDetailDirectionImpl): ClientDetailDirection
+
+    @Binds
+    fun bindDriverScreenDirection(impl: DriverScreenDirectionImpl): DriverScreenDirection
+
+    @Binds
+    fun bindProductScreenDirection(impl: ProductsScreenDirectionImpl): ProductsScreenDirection
+
+    @Binds
+    fun bindSearchProductDirection(impl: SearchScreenDirectionImpl): SearchScreenDirection
 
 
 }

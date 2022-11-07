@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/margin_small"
+    android:background="@drawable/bg_products_list_item"
+    android:orientation="vertical"
+    android:padding="@dimen/margin_std">
+
+    <ImageView
+        android:id="@+id/image_driver"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/bg_profile"
+        android:padding="@dimen/margin_nrl"
+        android:src="@drawable/ic_profile"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_driver_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_std"
+        android:fontFamily="@font/sf_pro_semi_bold"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/image_driver"
+        app:layout_constraintStart_toEndOf="@id/image_driver"
+        app:layout_constraintTop_toTopOf="@id/image_driver"
+        tools:text="Isoqov Jamshid" />
+
+
+    <ImageView
+        android:id="@+id/image_phone"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="@dimen/margin_std"
+        android:background="@drawable/bg_profile"
+        android:padding="@dimen/margin_nrl"
+        android:src="@drawable/ic_call"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/image_driver"
+        tools:ignore="ContentDescription" />
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_client_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_std"
+        android:background="?selectableItemBackground"
+        android:paddingVertical="@dimen/margin_nrl"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/image_phone"
+        app:layout_constraintStart_toEndOf="@id/image_phone"
+        app:layout_constraintTop_toTopOf="@id/image_phone"
+        tools:text="+99 890 714 41 02" />
+
+    <ImageView
+        android:id="@+id/image_password"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="@dimen/margin_std"
+        android:background="@drawable/bg_profile"
+        android:padding="@dimen/margin_nrl"
+        android:src="@drawable/ic_password"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/image_phone"
+        tools:ignore="ContentDescription" />
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_driver_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_std"
+        android:background="?selectableItemBackground"
+        android:fontFamily="@font/sf_pro_semi_bold"
+        android:letterSpacing="0.5"
+        android:paddingVertical="@dimen/margin_nrl"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/image_password"
+        app:layout_constraintStart_toEndOf="@id/image_password"
+        app:layout_constraintTop_toTopOf="@id/image_password"
+        tools:text="********" />
+
+    <View
+        android:id="@+id/driver_status"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginEnd="@dimen/margin_nrl"
+        android:background="@drawable/bg_driver_active"
+        app:layout_constraintBottom_toBottomOf="@id/image_driver"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/image_driver" />
+
+    <ImageView
+        android:id="@+id/image_edit_driver"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/bg_profile"
+        android:padding="8dp"
+        android:src="@drawable/ic_edit"
+        app:layout_constraintBottom_toBottomOf="@id/image_phone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/image_phone"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/image_delete_driver"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/bg_profile"
+        android:padding="8dp"
+        android:src="@drawable/ic_delete"
+        app:layout_constraintBottom_toBottomOf="@id/image_password"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/image_password"
+        tools:ignore="ContentDescription" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

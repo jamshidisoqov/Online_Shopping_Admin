@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/action_bar_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="@drawable/ic_left"
+        app:title="@string/filter"
+        app:titleCentered="true" />
+
+
+    <LinearLayout
+        android:id="@+id/container_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_std"
+        android:background="@drawable/bg_products_list_item"
+        android:orientation="vertical"
+        android:padding="@dimen/margin_std"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/action_bar_container">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sf_pro_semi_bold"
+            android:text="@string/choose_date"
+            android:textSize="18sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_std"
+            android:gravity="center_vertical">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_start_date"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/bg_search_view"
+                android:fontFamily="@font/sf_pro_semi_bold"
+                android:gravity="center"
+                android:padding="@dimen/margin_std"
+                tools:text="12.03.2021" />
+
+            <View
+                android:layout_width="20dp"
+                android:layout_height="@dimen/margin_extra_small"
+                android:layout_marginHorizontal="@dimen/margin_nrl"
+                android:background="@drawable/bg_search_view" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_end_date"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/bg_search_view"
+                android:fontFamily="@font/sf_pro_semi_bold"
+                android:gravity="center"
+                android:padding="@dimen/margin_std"
+                tools:text="12.03.2021" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/container_type"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin_std"
+        android:layout_marginTop="@dimen/margin_std"
+        android:background="@drawable/bg_products_list_item"
+        android:orientation="vertical"
+        android:padding="@dimen/margin_std"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/container_date">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sf_pro_semi_bold"
+            android:text="@string/type"
+            android:textSize="18sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_nrl">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/margin_std"
+                android:background="@drawable/bg_app_btn"
+                android:gravity="center"
+                android:padding="@dimen/margin_std"
+                android:text="@string/all"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/margin_std"
+                android:background="@drawable/bg_search_view"
+                android:gravity="center"
+                android:padding="@dimen/margin_std"
+                android:text="@string/simple"
+                android:textSize="16sp" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/margin_std"
+                android:background="@drawable/bg_search_view"
+                android:gravity="center"
+                android:padding="@dimen/margin_std"
+                android:text="@string/delivery"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/container_status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin_std"
+        android:layout_marginTop="@dimen/margin_std"
+        android:background="@drawable/bg_products_list_item"
+        android:orientation="vertical"
+        android:padding="@dimen/margin_std"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/container_type">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sf_pro_semi_bold"
+            android:text="@string/status"
+            android:textSize="18sp" />
+
+        <HorizontalScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_nrl">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/margin_std"
+                    android:background="@drawable/bg_app_btn"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:padding="@dimen/margin_std"
+                    android:text="@string/all"
+                    android:textSize="16sp" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/margin_std"
+                    android:background="@drawable/bg_search_view"
+                    android:gravity="center"
+                    android:padding="@dimen/margin_std"
+                    android:text="@string/ordered"
+                    android:textSize="16sp" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/margin_std"
+                    android:background="@drawable/bg_search_view"
+                    android:gravity="center"
+                    android:padding="@dimen/margin_std"
+                    android:text="@string/confirmed"
+                    android:textSize="16sp" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/margin_std"
+                    android:background="@drawable/bg_search_view"
+                    android:gravity="center"
+                    android:padding="@dimen/margin_std"
+                    android:text="@string/on_the_way"
+                    android:textSize="16sp" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/margin_std"
+                    android:background="@drawable/bg_search_view"
+                    android:gravity="center"
+                    android:padding="@dimen/margin_std"
+                    android:text="@string/delivered"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+
+    </LinearLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_filter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_std"
+        android:text="@string/filter"
+        android:textColor="@color/white"
+        android:fontFamily="@font/sf_pro_semi_bold"
+        android:background="@drawable/bg_app_btn"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

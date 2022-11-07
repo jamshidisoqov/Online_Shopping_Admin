@@ -8,7 +8,22 @@
     <string name="products">Products</string>
     <string name="branches">Branches</string>
     <string name="drivers">Drivers</string>
-    <string name="search_for_orders">Search for orders</string>
     <string name="order_value">Order value</string>
     <string name="order_status">Order status</string>
+    <string name="filter">Filter</string>
+    <string name="choose_date">Choose date</string>
+    <string name="type">Type</string>
+    <string name="all">All</string>
+    <string name="simple">Simple</string>
+    <string name="delivery">Delivery</string>
+    <string name="status">Status</string>
+    <string name="ordered">Ordered</string>
+    <string name="confirmed">Confirmed</string>
+    <string name="on_the_way">On the way</string>
+    <string name="delivered">Delivered</string>
+    <string name="search_for_orders">Search for orders</string>
+    <string name="search_client">Search for clients</string>
+    <string name="search_drivers">Search for drivers</string>
+    <string name="search_products">Search for products</string>
+    <string name="cancel">Cancel</string>
 </resources>
