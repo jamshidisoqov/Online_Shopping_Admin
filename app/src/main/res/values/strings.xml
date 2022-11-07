@@ -39,5 +39,12 @@
     <string name="enable_location_message">GPS отключен.\nПожалуйста, включите геолокацию</string>
 
     <string name="settings">Settings</string>
+    <string name="save">Save</string>
+    <string name="confirm">Confirm</string>
+    <string name="yes">Yes</string>
+    <string name="error">Error</string>
+    <string name="close">Close</string>
+    <string name="message">Message</string>
+    <string name="success">Success</string>
 
 </resources>

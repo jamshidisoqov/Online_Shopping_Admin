@@ -1,12 +1,15 @@
 package uz.gita.online_shopping_admin.utils.extensions
 
 import android.Manifest
+import android.app.Activity
 import android.content.Context
 import android.content.pm.PackageManager
 import android.location.LocationManager
 import android.widget.Toast
 import androidx.core.app.ActivityCompat
 import androidx.fragment.app.Fragment
+import uz.gita.online_shopping_admin.ui.dialogs.ErrorDialog
+import uz.gita.online_shopping_admin.ui.dialogs.MessageDialog
 
 // Created by Jamshid Isoqov an 10/12/2022
 
@@ -37,4 +40,19 @@ fun Fragment.isLocationEnabled(): Boolean {
     return locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER) || locationManager.isProviderEnabled(
         LocationManager.NETWORK_PROVIDER
     )
+}
+
+
+fun Activity.showErrorDialog(message: String) {
+    val dialog = ErrorDialog(this, message)
+    dialog.show()
+}
+
+fun Activity.showMessageDialog(message: String) {
+    val dialog = MessageDialog(this, message)
+    dialog.show()
+}
+
+fun Activity.toast(message: String) {
+    Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
 }
