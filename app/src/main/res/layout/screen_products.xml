@@ -20,31 +20,31 @@
             android:id="@+id/image_back"
             android:layout_width="40dp"
             android:layout_height="40dp"
+            android:layout_marginStart="@dimen/margin_nrl"
             android:padding="@dimen/margin_nrl"
             android:src="@drawable/ic_left"
-            android:layout_marginStart="@dimen/margin_nrl"
             tools:ignore="ContentDescription" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/products"
-            android:textSize="20sp"
-            android:fontFamily="@font/sf_pro_semi_bold"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="@dimen/margin_nrl"/>
+            android:layout_marginTop="@dimen/margin_nrl"
+            android:fontFamily="@font/sf_pro_semi_bold"
+            android:text="@string/products"
+            android:textSize="20sp" />
 
 
         <TextView
             android:id="@+id/tv_search"
             android:layout_width="match_parent"
             android:layout_height="40dp"
+            android:layout_below="@id/image_back"
             android:layout_centerVertical="true"
             android:layout_marginHorizontal="12dp"
             android:layout_marginVertical="8dp"
             android:background="@drawable/bg_search_view"
             android:drawablePadding="8dp"
-            android:layout_below="@id/image_back"
             android:gravity="center_vertical"
             android:hint="@string/search_products"
             android:paddingHorizontal="12dp"
@@ -62,15 +62,33 @@
         tools:listitem="@layout/list_item_category" />
 
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/list_products"
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginHorizontal="6dp"
-        android:layout_weight="1"
-        android:orientation="vertical"
-        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-        app:spanCount="2"
-        tools:listitem="@layout/list_item_products" />
+        android:layout_weight="1">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/list_products"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="6dp"
+            android:orientation="vertical"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:spanCount="2"
+            tools:listitem="@layout/list_item_products" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_add_products"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="@dimen/margin_std"
+            android:src="@drawable/ic_add"
+            app:shapeAppearanceOverlay="@style/FabShapeStyle"
+            app:tint="@color/white"
+            tools:ignore="ContentDescription" />
+    </RelativeLayout>
+
 
 </LinearLayout>

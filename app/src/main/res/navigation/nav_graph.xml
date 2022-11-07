@@ -50,6 +50,9 @@
         <action
             android:id="@+id/action_mainScreen_to_productsScreen"
             app:destination="@id/productsScreen" />
+        <action
+            android:id="@+id/action_mainScreen_to_branchesScreen"
+            app:destination="@id/branchesScreen" />
     </fragment>
     <fragment
         android:id="@+id/ordersScreen"
@@ -114,6 +117,9 @@
         <action
             android:id="@+id/action_productsScreen_to_searchScreen"
             app:destination="@id/searchScreen" />
+        <action
+            android:id="@+id/action_productsScreen_to_addProductsScreen"
+            app:destination="@id/addProductsScreen" />
     </fragment>
     <fragment
         android:id="@+id/productDetailsScreen"
@@ -132,5 +138,28 @@
         <action
             android:id="@+id/action_searchScreen_to_orderDetailScreen"
             app:destination="@id/orderDetailScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/addProductsScreen"
+        tools:layout="@layout/screen_add_products"
+        android:name="uz.gita.online_shopping_admin.ui.main.products.add.AddProductsScreen"
+        android:label="AddProductsScreen" />
+    <fragment
+        android:id="@+id/branchesScreen"
+        tools:layout="@layout/screen_branches"
+        android:name="uz.gita.online_shopping_admin.ui.main.branches.BranchesScreen"
+        android:label="BranchesScreen" >
+        <action
+            android:id="@+id/action_branchesScreen_to_branchDetailsScreen"
+            app:destination="@id/branchDetailsScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/branchDetailsScreen"
+        tools:layout="@layout/screen_branch_details"
+        android:name="uz.gita.online_shopping_admin.ui.main.branches.details.BranchDetailsScreen"
+        android:label="BranchDetailsScreen" >
+        <argument
+            android:name="branch_data"
+            app:argType="uz.gita.online_shopping_admin.data.models.data.BranchData" />
     </fragment>
 </navigation>

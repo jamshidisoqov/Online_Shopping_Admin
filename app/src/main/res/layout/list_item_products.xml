@@ -17,8 +17,7 @@
         android:layout_height="96dp"
         android:layout_gravity="center_horizontal"
         android:paddingTop="16dp"
-        android:scaleType="fitXY"
-        android:src="@drawable/max_way_text"
+        android:src="@drawable/place"
         tools:ignore="ContentDescription" />
 
     <TextView

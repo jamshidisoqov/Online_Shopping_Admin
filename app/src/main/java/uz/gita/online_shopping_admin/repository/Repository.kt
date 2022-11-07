@@ -30,4 +30,6 @@ interface Repository {
 
     fun getAllProducts(): Flow<ResultData<List<ProductData>>>
 
+    fun getAllBranches(): Flow<ResultData<List<BranchData>>>
+
 }

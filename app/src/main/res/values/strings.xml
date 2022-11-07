@@ -26,4 +26,18 @@
     <string name="search_drivers">Search for drivers</string>
     <string name="search_products">Search for products</string>
     <string name="cancel">Cancel</string>
+    <string name="category">Category</string>
+    <string name="name">Name</string>
+    <string name="price">Price</string>
+    <string name="description">Description</string>
+    <string name="add_product">Add product</string>
+
+    <string name="fine_permission_denied_explanation">В разрешении на определение точного местоположения было отказано, но оно необходимо для основных функций.</string>
+    <string name="permission_approved_explanation">Вы одобрили расположение FINE, продолжайте (и нажимайте) дальше!</string>
+    <string name="enable_location">Включить местоположение</string>
+    <string name="location_settings">Включить</string>
+    <string name="enable_location_message">GPS отключен.\nПожалуйста, включите геолокацию</string>
+
+    <string name="settings">Settings</string>
+
 </resources>

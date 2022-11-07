@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/action_bar_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="@drawable/ic_left"
+        app:title="Add product"
+        app:titleCentered="true" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/product_image_bar"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/light_grey"
+        app:layout_constraintDimensionRatio="1:0.5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/action_bar_container">
+
+        <ImageView
+            android:id="@+id/image_food"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="@drawable/place"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.4"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/ic_camera"
+            app:layout_constraintBottom_toBottomOf="@id/image_food"
+            app:layout_constraintEnd_toEndOf="@id/image_food"
+            app:layout_constraintStart_toEndOf="@id/image_food"
+            app:layout_constraintTop_toBottomOf="@id/image_food"
+            tools:ignore="ContentDescription" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:layout_margin="@dimen/margin_std"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/product_image_bar"
+        tools:ignore="UselessLeaf">
+
+
+
+            <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                android:id="@+id/act_category"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:layout_marginBottom="@dimen/margin_std"
+                android:background="@drawable/bg_products_list_item"
+                android:cursorVisible="false"
+                android:drawableEnd="@drawable/ic_down"
+                android:fontFamily="@font/sf_pro_semi_bold"
+                android:hint="@string/category"
+                android:imeOptions="actionNext|flagNoExtractUi"
+                android:inputType="textNoSuggestions|textVisiblePassword"
+                android:padding="@dimen/margin_std" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/input_name"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:layout_marginBottom="@dimen/margin_std"
+                android:background="@drawable/bg_products_list_item"
+                android:fontFamily="@font/sf_pro_semi_bold"
+                android:hint="@string/name"
+                android:padding="@dimen/margin_std" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/input_price"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:layout_marginBottom="@dimen/margin_std"
+                android:background="@drawable/bg_products_list_item"
+                android:fontFamily="@font/sf_pro_semi_bold"
+                android:hint="@string/price"
+                android:inputType="number"
+                android:padding="@dimen/margin_std" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/input_info"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginBottom="@dimen/margin_std"
+                android:layout_weight="1"
+                android:gravity="start"
+                android:background="@drawable/bg_products_list_item"
+                android:hint="@string/description"
+                android:padding="@dimen/margin_std" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_add_product"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_app_btn"
+                android:enabled="false"
+                android:fontFamily="@font/sf_pro_semi_bold"
+                android:text="@string/add_product"
+                android:textColor="@color/white" />
+
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
