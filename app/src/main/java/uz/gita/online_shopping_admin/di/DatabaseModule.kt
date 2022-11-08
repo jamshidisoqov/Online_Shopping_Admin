@@ -36,17 +36,18 @@ object DatabaseModule {
 
     @[Provides Singleton]
     fun provideClient(
-        @ApplicationContext context: Context
+        @ApplicationContext context: Context,
+        mySharedPref:MySharedPref
     ): OkHttpClient =
         OkHttpClient.Builder()
             .addInterceptor(ChuckerInterceptor.Builder(context).build())
             .connectTimeout(CONNECTION_TIME_OUT, TimeUnit.MILLISECONDS)
-            /*.addInterceptor { chain ->
+            .addInterceptor { chain ->
                 val requestBuilder = chain.request().newBuilder()
                 if (mySharedPref.token.isNotEmpty())
                     requestBuilder.addHeader("Authorization", "Bearer ${mySharedPref.token}")
                 chain.proceed(requestBuilder.build())
-            }*/
+            }
             .readTimeout(CONNECTION_TIME_OUT, TimeUnit.MILLISECONDS)
             .build()
 

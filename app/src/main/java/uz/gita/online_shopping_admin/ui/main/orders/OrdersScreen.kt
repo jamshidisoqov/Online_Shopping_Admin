@@ -16,6 +16,7 @@ import uz.gita.online_shopping_admin.R
 import uz.gita.online_shopping_admin.databinding.ScreenOrdersBinding
 import uz.gita.online_shopping_admin.presenter.OrderViewModelImpl
 import uz.gita.online_shopping_admin.utils.extensions.DEBOUNCE_TIME_OUT
+import uz.gita.online_shopping_admin.utils.extensions.toast
 
 // Created by Jamshid Isoqov an 11/5/2022
 @AndroidEntryPoint
@@ -46,7 +47,7 @@ class OrdersScreen : Fragment(R.layout.screen_orders) {
             viewModel.navigateToOrderDetails(it)
         }
         adapter.setClientItemClickListener {
-            //TODO navigate to client
+            toast("Working")
         }
         viewModel.getOrders()
 

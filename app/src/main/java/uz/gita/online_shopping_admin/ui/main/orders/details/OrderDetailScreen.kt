@@ -13,6 +13,7 @@ import by.kirich1409.viewbindingdelegate.viewBinding
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
+import ru.ldralighieri.corbind.view.clicks
 import uz.gita.online_shopping_admin.utils.extensions.getOrderName
 import uz.gita.online_shopping_admin.R
 import uz.gita.online_shopping_admin.data.models.data.ProductItem
@@ -21,7 +22,9 @@ import uz.gita.online_shopping_admin.data.models.enums.OrderType
 import uz.gita.online_shopping_admin.databinding.ListItemOrderProductsBinding
 import uz.gita.online_shopping_admin.databinding.ScreenOrderDetailsBinding
 import uz.gita.online_shopping_admin.presenter.OrderDetailViewModelImpl
+import uz.gita.online_shopping_admin.ui.main.map.MapScreen
 import uz.gita.online_shopping_admin.utils.extensions.getFinanceType
+import uz.gita.online_shopping_admin.utils.extensions.gone
 
 // Created by Jamshid Isoqov an 11/5/2022
 @AndroidEntryPoint
@@ -41,6 +44,9 @@ class OrderDetailScreen : Fragment(R.layout.screen_order_details) {
         loadOrders(data.products)
         viewBinding.tvOderStatus.text = data.status.name
         viewBinding.btnOrderStatus.text = OrderStatus.values()[data.status.ordinal + 1].name
+        if (data.type==OrderType.SIMPLE){
+            viewBinding.containerLocation.gone()
+        }
         viewModel.address.onEach {
             viewBinding.tvLocation.text = it
         }.launchIn(viewLifecycleOwner.lifecycleScope)

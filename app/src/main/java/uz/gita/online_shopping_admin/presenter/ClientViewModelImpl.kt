@@ -28,9 +28,10 @@ class ClientViewModelImpl @Inject constructor(
 
     override fun searchClients(query: String) {
         viewModelScope.launch(Dispatchers.Default){
-            clientsList = clientsList.filter {
+            val l = clientsList.filter {
                 it.fullName.startsWith(query)
             }
+            clientsFlow.emit(l)
         }
     }
 

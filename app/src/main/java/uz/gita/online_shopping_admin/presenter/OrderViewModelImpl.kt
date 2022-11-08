@@ -76,7 +76,9 @@ class OrderViewModelImpl @Inject constructor(
 
     override fun getOrders() {
         viewModelScope.launch(Dispatchers.IO) {
+            showed.setLoading(true)
             repository.getAllOrders().collectLatest {
+                showed.setLoading(false)
                 it.onSuccess { list ->
                     val filterList = withContext(Dispatchers.Default) {
                         list.filter { order ->

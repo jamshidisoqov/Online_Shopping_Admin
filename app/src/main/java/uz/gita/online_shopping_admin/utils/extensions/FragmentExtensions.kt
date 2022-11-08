@@ -8,13 +8,14 @@ import android.location.LocationManager
 import android.widget.Toast
 import androidx.core.app.ActivityCompat
 import androidx.fragment.app.Fragment
+import uz.gita.online_shopping_admin.ui.dialogs.ConfirmDialog
 import uz.gita.online_shopping_admin.ui.dialogs.ErrorDialog
 import uz.gita.online_shopping_admin.ui.dialogs.MessageDialog
 
 // Created by Jamshid Isoqov an 10/12/2022
 
 
-const val DEBOUNCE_TIME_OUT: Long = 100L
+const val DEBOUNCE_TIME_OUT: Long = 150L
 
 fun Fragment.toast(message: String) {
     Toast.makeText(requireContext(), message, Toast.LENGTH_SHORT).show()
@@ -32,6 +33,14 @@ fun Context.hasPermission(permission: String): Boolean {
 
     return ActivityCompat.checkSelfPermission(this, permission) ==
             PackageManager.PERMISSION_GRANTED
+}
+
+fun Fragment.showConfirmDialog(message: String, block: () -> Unit) {
+    val dialog = ConfirmDialog(requireContext(), message)
+    dialog.setConfirmClickListener {
+        block.invoke()
+    }
+    dialog.show()
 }
 
 fun Fragment.isLocationEnabled(): Boolean {

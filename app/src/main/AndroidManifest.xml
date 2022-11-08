@@ -19,6 +19,7 @@
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@drawable/maxway"
         android:label="@string/app_name"
+        android:name=".App"
         android:roundIcon="@drawable/maxway"
         android:supportsRtl="true"
         android:theme="@style/Theme.OnlineShoppingAdmin"

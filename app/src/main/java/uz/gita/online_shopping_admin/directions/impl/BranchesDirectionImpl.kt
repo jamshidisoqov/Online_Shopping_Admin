@@ -15,4 +15,8 @@ class BranchesDirectionImpl @Inject constructor(private val navigator: Navigator
             )
         )
     }
+
+    override suspend fun navigateToAddBranch() {
+        navigator.navigateTo(BranchesScreenDirections.actionBranchesScreenToAddBranchesScreen())
+    }
 }

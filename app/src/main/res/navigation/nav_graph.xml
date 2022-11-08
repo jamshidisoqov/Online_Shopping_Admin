@@ -105,7 +105,14 @@
         android:id="@+id/driversScreen"
         tools:layout="@layout/screen_drivers"
         android:name="uz.gita.online_shopping_admin.ui.main.drivers.DriversScreen"
-        android:label="DriversScreen" />
+        android:label="DriversScreen" >
+        <action
+            android:id="@+id/action_driversScreen_to_driverDetailsScreen"
+            app:destination="@id/driverDetailsScreen" />
+        <action
+            android:id="@+id/action_driversScreen_to_addDriverScreen"
+            app:destination="@id/addDriverScreen" />
+    </fragment>
     <fragment
         android:id="@+id/productsScreen"
         tools:layout="@layout/screen_products"
@@ -152,6 +159,9 @@
         <action
             android:id="@+id/action_branchesScreen_to_branchDetailsScreen"
             app:destination="@id/branchDetailsScreen" />
+        <action
+            android:id="@+id/action_branchesScreen_to_addBranchesScreen"
+            app:destination="@id/addBranchesScreen" />
     </fragment>
     <fragment
         android:id="@+id/branchDetailsScreen"
@@ -162,4 +172,35 @@
             android:name="branch_data"
             app:argType="uz.gita.online_shopping_admin.data.models.data.BranchData" />
     </fragment>
+    <fragment
+        android:id="@+id/addBranchesScreen"
+        tools:layout="@layout/screen_add_branches"
+        android:name="uz.gita.online_shopping_admin.ui.main.branches.add.AddBranchesScreen"
+        android:label="AddBranchesScreen" >
+        <action
+            android:id="@+id/action_addBranchesScreen_to_mapScreen"
+            app:destination="@id/mapScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/mapScreen"
+        tools:layout="@layout/screen_map"
+        android:name="uz.gita.online_shopping_admin.ui.main.map.MapScreen"
+        android:label="MapScreen" />
+    <fragment
+        android:id="@+id/driverDetailsScreen"
+        tools:layout="@layout/screen_driver_details"
+        android:name="uz.gita.online_shopping_admin.ui.main.drivers.details.DriverDetailsScreen"
+        android:label="DriverDetailsScreen" >
+        <action
+            android:id="@+id/action_driverDetailsScreen_to_orderDetailScreen"
+            app:destination="@id/orderDetailScreen" />
+        <argument
+            android:name="driver_data"
+            app:argType="uz.gita.online_shopping_admin.data.models.data.DriverData" />
+    </fragment>
+    <fragment
+        android:id="@+id/addDriverScreen"
+        tools:layout="@layout/screen_add_driver"
+        android:name="uz.gita.online_shopping_admin.ui.main.drivers.add.AddDriverScreen"
+        android:label="AddDriverScreen" />
 </navigation>

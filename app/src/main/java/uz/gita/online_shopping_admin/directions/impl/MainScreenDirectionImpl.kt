@@ -2,32 +2,33 @@ package uz.gita.online_shopping_admin.directions.impl
 
 import uz.gita.online_shopping_admin.directions.MainScreenDirection
 import uz.gita.online_shopping_admin.navigation.Navigator
+import uz.gita.online_shopping_admin.ui.main.MainScreenDirections
 import javax.inject.Inject
 
 class MainScreenDirectionImpl @Inject constructor(
     private val navigator: Navigator
 ) : MainScreenDirection {
     override suspend fun navigateToOrders() {
-        //TODO navigate to ...
+        navigator.navigateTo(MainScreenDirections.actionMainScreenToOrdersScreen())
     }
 
     override suspend fun navigateToFinance() {
-        //TODO navigate to ...
+        //TODO navigate to finance navigator.navigateTo(MainScreenDirections.)
     }
 
     override suspend fun navigateToClients() {
-        //TODO navigate to ...
+        navigator.navigateTo(MainScreenDirections.actionMainScreenToClientsScreen())
     }
 
     override suspend fun navigateToProducts() {
-        //TODO navigate to ...
+        navigator.navigateTo(MainScreenDirections.actionMainScreenToProductsScreen())
     }
 
     override suspend fun navigateToBranches() {
-        //TODO navigate to ...
+        navigator.navigateTo(MainScreenDirections.actionMainScreenToBranchesScreen())
     }
 
     override suspend fun navigateToDrivers() {
-        //TODO navigate to ...
+        navigator.navigateTo(MainScreenDirections.actionMainScreenToDriversScreen())
     }
 }

@@ -6,4 +6,6 @@ import uz.gita.online_shopping_admin.data.models.data.BranchData
 interface BranchesDirection {
 
     suspend fun navigateToBranchesDetails(branchData: BranchData)
+
+    suspend fun navigateToAddBranch()
 }

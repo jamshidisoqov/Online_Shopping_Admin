@@ -7,7 +7,7 @@ import uz.gita.online_shopping_admin.databinding.DialogConfirmBinding
 import uz.gita.online_shopping_admin.utils.extensions.config
 
 // Created by Jamshid Isoqov an 10/12/2022
-class ConfirmDialog(ctx: Context) : Dialog(ctx) {
+class ConfirmDialog(ctx: Context, private val message: String = "") : Dialog(ctx) {
 
     private var confirmClickListener: (() -> Unit)? = null
 
@@ -22,6 +22,9 @@ class ConfirmDialog(ctx: Context) : Dialog(ctx) {
         config(viewBinding = binding)
         binding.btnCancel.setOnClickListener {
             dismiss()
+        }
+        if (message.isNotEmpty()) {
+            binding.tvMessage.text = message
         }
         binding.btnConfirm.setOnClickListener {
             confirmClickListener?.invoke()

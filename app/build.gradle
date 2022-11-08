@@ -41,8 +41,7 @@ android {
 }
 
 dependencies {
-
-    def room_version = "2.4.3"
+    
     def nav_version = "2.5.2"
     def retrofit_version = "2.9.0"
 
@@ -65,11 +64,6 @@ dependencies {
     implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
     //noinspection GradleDependency
     implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
-
-    //room
-    implementation "androidx.room:room-runtime:$room_version"
-    kapt "androidx.room:room-compiler:$room_version"
-    implementation "androidx.room:room-ktx:$room_version"
 
     //hilt
     //noinspection GradleDependency
@@ -120,5 +114,6 @@ dependencies {
     //gson
     implementation "com.google.code.gson:gson:2.9.1"
 
-
+    implementation 'com.github.Drjacky:ImagePicker:2.1.16'
+    
 }

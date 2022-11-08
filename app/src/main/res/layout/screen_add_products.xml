@@ -54,69 +54,81 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:orientation="vertical"
         android:layout_margin="@dimen/margin_std"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@id/product_image_bar"
         tools:ignore="UselessLeaf">
 
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-            <com.google.android.material.textfield.MaterialAutoCompleteTextView
+            <androidx.appcompat.widget.AppCompatSpinner
                 android:id="@+id/act_category"
-                android:layout_width="match_parent"
+                style="@style/Widget.AppCompat.Light.DropDownItem.Spinner"
+                android:layout_width="0dp"
                 android:layout_height="54dp"
-                android:layout_marginBottom="@dimen/margin_std"
-                android:background="@drawable/bg_products_list_item"
-                android:cursorVisible="false"
-                android:drawableEnd="@drawable/ic_down"
-                android:fontFamily="@font/sf_pro_semi_bold"
-                android:hint="@string/category"
-                android:imeOptions="actionNext|flagNoExtractUi"
-                android:inputType="textNoSuggestions|textVisiblePassword"
-                android:padding="@dimen/margin_std" />
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/input_name"
-                android:layout_width="match_parent"
-                android:layout_height="54dp"
-                android:layout_marginBottom="@dimen/margin_std"
-                android:background="@drawable/bg_products_list_item"
-                android:fontFamily="@font/sf_pro_semi_bold"
-                android:hint="@string/name"
-                android:padding="@dimen/margin_std" />
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/input_price"
-                android:layout_width="match_parent"
-                android:layout_height="54dp"
-                android:layout_marginBottom="@dimen/margin_std"
-                android:background="@drawable/bg_products_list_item"
-                android:fontFamily="@font/sf_pro_semi_bold"
-                android:hint="@string/price"
-                android:inputType="number"
-                android:padding="@dimen/margin_std" />
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/input_info"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
                 android:layout_marginBottom="@dimen/margin_std"
                 android:layout_weight="1"
-                android:gravity="start"
                 android:background="@drawable/bg_products_list_item"
-                android:hint="@string/description"
-                android:padding="@dimen/margin_std" />
-
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/btn_add_product"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/bg_app_btn"
-                android:enabled="false"
-                android:fontFamily="@font/sf_pro_semi_bold"
-                android:text="@string/add_product"
+                android:popupBackground="@drawable/bg_products_list_item"
                 android:textColor="@color/white" />
+
+            <ImageView
+                android:id="@+id/image_add_category"
+                android:layout_width="54dp"
+                android:layout_height="54dp"
+                android:layout_marginStart="@dimen/margin_std"
+                android:background="@drawable/bg_products_list_item"
+                android:padding="@dimen/margin_std"
+                android:src="@drawable/ic_add"
+                app:tint="@color/dark_grey"
+                tools:ignore="ContentDescription" />
+
+        </LinearLayout>
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/input_name"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:layout_marginBottom="@dimen/margin_std"
+            android:background="@drawable/bg_products_list_item"
+            android:fontFamily="@font/sf_pro_semi_bold"
+            android:hint="@string/name"
+            android:padding="@dimen/margin_std" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/input_price"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:layout_marginBottom="@dimen/margin_std"
+            android:background="@drawable/bg_products_list_item"
+            android:fontFamily="@font/sf_pro_semi_bold"
+            android:hint="@string/price"
+            android:inputType="number"
+            android:padding="@dimen/margin_std" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/input_info"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="@dimen/margin_std"
+            android:layout_weight="1"
+            android:background="@drawable/bg_products_list_item"
+            android:gravity="start"
+            android:hint="@string/description"
+            android:padding="@dimen/margin_std" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_add_product"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_app_btn"
+            android:fontFamily="@font/sf_pro_semi_bold"
+            android:text="@string/add_product"
+            android:textColor="@color/white" />
 
 
     </LinearLayout>

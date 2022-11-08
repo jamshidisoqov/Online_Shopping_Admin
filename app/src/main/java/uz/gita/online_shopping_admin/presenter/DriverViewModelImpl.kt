@@ -61,23 +61,25 @@ class DriverViewModelImpl @Inject constructor(
     override fun deleteDriver(driverData: DriverData) {
         viewModelScope.launch(Dispatchers.IO) {
             showed.setLoading(true)
-            repository.deleteDriver(driverData).onSuccess {
-                showed.setToast("Successfully deleted")
-            }.onMessage { message ->
-                showed.setMessage(message)
-            }.onError { error ->
-                showed.setError(error.getMessage())
+            repository.deleteDriver(driverData.toDriverDto()).collectLatest {
+                showed.setLoading(false)
+                it.onSuccess {
+                    showed.setToast("Successfully deleted")
+                }.onMessage { message ->
+                    showed.setMessage(message)
+                }.onError { error ->
+                    showed.setError(error.getMessage())
+                }
             }
-            showed.setLoading(false)
         }
     }
 
     override fun searchDriver(query: String) {
         viewModelScope.launch(Dispatchers.Default) {
-            drivers = drivers.filter {
+            val d = drivers.filter {
                 it.name.startsWith(query)
             }
-            driversFlow.emit(drivers)
+            driversFlow.emit(d)
         }
     }
 }

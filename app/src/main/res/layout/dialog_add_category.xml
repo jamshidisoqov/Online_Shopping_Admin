@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_language"
+    android:orientation="vertical"
+    android:padding="@dimen/margin_extra_large">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/sf_pro_semi_bold"
+        android:text="@string/add_category"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/input_category_name"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_marginTop="@dimen/margin_extra_large"
+        android:background="@drawable/bg_products_list_item"
+        android:hint="@string/name"
+        android:inputType="textShortMessage"
+        android:maxLines="1"
+        android:padding="@dimen/margin_std" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/input_category_info"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_marginTop="@dimen/margin_std"
+        android:background="@drawable/bg_products_list_item"
+        android:hint="@string/description"
+        android:padding="@dimen/margin_std" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_add_category"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_std"
+        android:background="@drawable/bg_app_btn"
+        android:text="@string/add_category"
+        android:textColor="@color/white" />
+
+
+</LinearLayout>

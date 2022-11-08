@@ -42,8 +42,6 @@ class ClientsAdapter : ListAdapter<ClientData, ClientsAdapter.ViewHolder>(itemCl
     )
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) = holder.onBind()
-
-
 }
 
 
@@ -52,6 +50,6 @@ private var itemClientCallback = object : DiffUtil.ItemCallback<ClientData>() {
         oldItem.id == newItem.id
 
     override fun areContentsTheSame(oldItem: ClientData, newItem: ClientData): Boolean =
-        oldItem.fullName == newItem.fullName && oldItem.active == newItem.active
+        oldItem.fullName == newItem.fullName && oldItem.active == newItem.active && oldItem.phoneNumber == newItem.phoneNumber
 
 }

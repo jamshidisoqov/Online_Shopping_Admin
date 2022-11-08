@@ -12,11 +12,13 @@ import kotlinx.coroutines.FlowPreview
 import kotlinx.coroutines.flow.debounce
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
+import ru.ldralighieri.corbind.view.clicks
 import ru.ldralighieri.corbind.widget.textChanges
 import uz.gita.online_shopping_admin.R
 import uz.gita.online_shopping_admin.databinding.ScreenDriversBinding
 import uz.gita.online_shopping_admin.presenter.DriverViewModelImpl
 import uz.gita.online_shopping_admin.utils.extensions.DEBOUNCE_TIME_OUT
+import uz.gita.online_shopping_admin.utils.extensions.showConfirmDialog
 
 // Created by Jamshid Isoqov an 11/5/2022
 @AndroidEntryPoint
@@ -55,12 +57,15 @@ class DriversScreen : Fragment(R.layout.screen_drivers) {
                 viewModel.searchDriver(it.toString())
             }.launchIn(viewLifecycleOwner.lifecycleScope)
 
-        viewBinding.imageBack.setOnClickListener {
-            findNavController().navigateUp()
-        }
+        viewBinding.imageBack.clicks()
+            .debounce(DEBOUNCE_TIME_OUT).onEach {
+                findNavController().navigateUp()
+            }.launchIn(lifecycleScope)
 
         viewModel.openDriverDelete.onEach {
-            //TODO open confirm dialog
+            showConfirmDialog(resources.getString(R.string.delete_driver)){
+                viewModel.deleteDriver(it)
+            }
         }.launchIn(lifecycleScope)
 
         viewModel.getDriver()

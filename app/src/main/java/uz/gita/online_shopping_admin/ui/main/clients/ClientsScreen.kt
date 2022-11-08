@@ -33,9 +33,7 @@ class ClientsScreen : Fragment(R.layout.screen_clients) {
 
     @OptIn(FlowPreview::class)
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-
         viewBinding.listClients.adapter = adapter
-
         viewBinding.imageBack.clicks()
             .debounce(DEBOUNCE_TIME_OUT)
             .onEach {

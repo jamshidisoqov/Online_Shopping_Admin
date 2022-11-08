@@ -8,11 +8,15 @@ import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import by.kirich1409.viewbindingdelegate.viewBinding
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.FlowPreview
+import kotlinx.coroutines.flow.debounce
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
-import uz.gita.online_shopping_admin.presenter.BranchesViewModelImpl
+import ru.ldralighieri.corbind.view.clicks
 import uz.gita.online_shopping_admin.R
 import uz.gita.online_shopping_admin.databinding.ScreenBranchesBinding
+import uz.gita.online_shopping_admin.presenter.BranchesViewModelImpl
+import uz.gita.online_shopping_admin.utils.extensions.DEBOUNCE_TIME_OUT
 
 // Created by Jamshid Isoqov an 11/5/2022
 @AndroidEntryPoint
@@ -26,6 +30,7 @@ class BranchesScreen : Fragment(R.layout.screen_branches) {
         BranchesAdapter()
     }
 
+    @OptIn(FlowPreview::class)
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 
         viewBinding.listBranches.adapter = adapter
@@ -38,9 +43,17 @@ class BranchesScreen : Fragment(R.layout.screen_branches) {
             viewModel.navigateToBranchDetails(it)
         }
 
-        viewBinding.imageBack.setOnClickListener {
-            findNavController().navigateUp()
-        }
+        viewBinding.fabAddBranch.clicks()
+            .debounce(DEBOUNCE_TIME_OUT)
+            .onEach {
+                viewModel.navigateToAddBranch()
+            }.launchIn(lifecycleScope)
+
+        viewBinding.imageBack.clicks()
+            .debounce(DEBOUNCE_TIME_OUT)
+            .onEach {
+                findNavController().navigateUp()
+            }.launchIn(lifecycleScope)
     }
 
 

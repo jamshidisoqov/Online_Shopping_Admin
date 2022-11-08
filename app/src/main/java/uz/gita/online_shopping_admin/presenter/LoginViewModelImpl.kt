@@ -20,6 +20,7 @@ class LoginViewModelImpl @Inject constructor(
 ) : LoginViewModel, ViewModel() {
     override fun login(login: String, password: String) {
         viewModelScope.launch(Dispatchers.IO) {
+            showed.setLoading(true)
             repository.login(login, password).onSuccess {
                 repository.setToken(it)
                 showed.setToast("Successfully login")
@@ -29,6 +30,7 @@ class LoginViewModelImpl @Inject constructor(
             }.onMessage { message ->
                 showed.setMessage(message)
             }
+            showed.setLoading(false)
         }
     }
 }

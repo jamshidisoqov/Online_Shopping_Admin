@@ -2,16 +2,17 @@ package uz.gita.online_shopping_admin.directions.impl
 
 import uz.gita.online_shopping_admin.directions.SplashScreenDirection
 import uz.gita.online_shopping_admin.navigation.Navigator
+import uz.gita.online_shopping_admin.ui.splash.SplashScreenDirections
 import javax.inject.Inject
 
 class SplashScreenDirectionImpl @Inject constructor(
     private val navigator: Navigator
 ) : SplashScreenDirection {
     override suspend fun navigateToMain() {
-        TODO("navigate to main")
+        navigator.navigateTo(SplashScreenDirections.actionSplashScreenToMainScreen())
     }
 
     override suspend fun navigateToLogin() {
-        TODO("navigate to login")
+        navigator.navigateTo(SplashScreenDirections.actionSplashScreenToLoginScreen())
     }
 }

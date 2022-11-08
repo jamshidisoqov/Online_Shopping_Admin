@@ -10,3 +10,9 @@ fun Long.getOrderName() = "Order N-$this"
 fun Long.getDate(): String {
     return getCurrentDate(Date(this))
 }
+
+fun getCurrentAndLeftDay(day:Int):Pair<Long,Long> {
+    val current = Date().time
+    val left = current-86400*day
+    return Pair(left,current)
+}

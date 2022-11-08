@@ -42,5 +42,8 @@ interface DirectionsModule {
     @Binds
     fun bindBranchesScreenDirection(impl: BranchesDirectionImpl): BranchesDirection
 
+    @Binds
+    fun bindDriverDetailsScreenDirection(impl: DriverDetailDirectionImpl): DriverDetailDirection
+
 
 }

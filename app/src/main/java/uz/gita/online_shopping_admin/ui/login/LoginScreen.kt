@@ -28,12 +28,14 @@ class LoginScreen : Fragment(R.layout.screen_login) {
 
     @OptIn(FlowPreview::class)
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        viewBinding.btnLogin.clicks().debounce(DEBOUNCE_TIME_OUT).onEach {
-            val login = viewBinding.inputLogin.text.toString()
-            val password = viewBinding.inputPassword.text.toString()
-            if (login.isNotEmpty() && password.isNotEmpty()) {
-                viewModel.login(login, password)
-            } else toast("Fields input required")
-        }.launchIn(viewLifecycleOwner.lifecycleScope)
+        viewBinding.btnLogin.clicks()
+            .debounce(DEBOUNCE_TIME_OUT)
+            .onEach {
+                val login = viewBinding.inputLogin.text.toString()
+                val password = viewBinding.inputPassword.text.toString()
+                if (login.isNotEmpty() && password.isNotEmpty()) {
+                    viewModel.login(login, password)
+                } else toast("Fields input required")
+            }.launchIn(viewLifecycleOwner.lifecycleScope)
     }
 }
